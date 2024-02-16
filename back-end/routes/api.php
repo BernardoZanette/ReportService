@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\UserController;
+use App\Http\Controllers\API\ImageController;
+use App\Http\Controllers\API\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +23,8 @@ Route::get('/', function () {
     ]);
 });
 
+Route::apiResource('/images', ImageController::class);
 
+Route::apiResource('/users', UserController::class);
+
+Route::apiResource('/reports', ReportController::class);
